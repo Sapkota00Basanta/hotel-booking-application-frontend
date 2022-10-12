@@ -1,0 +1,57 @@
+//Importing properties from another modules
+@import "../../App.scss";
+
+/* 
+    Defining properties values for Navigation Component 
+*/
+//NavigationBar class properties
+$navBarPrimaryColor: $primaryColor;
+$navBarHeight: 50px;
+$navBarDisplayType: flex;
+$navBarJustifyContent: center;
+
+//NavigationContainer class properties
+$navBarContainerWidth: 100%;
+$navBarContainerMaxWidth: 1024px;
+$navBarContainerTexColor: #ffffffb3;
+$navBarContainerAlignItems: $navBarJustifyContent;
+$navBarContainerJustifyContent: space-between;
+
+//NavigationLogo class properties
+$navBarLogoFontWeight: 500;
+
+//NavigationButton class properties
+$navBarButtonMarginLeft: 20px;
+$navBarButtonCursor: pointer;
+$navBarButtonPadding: 5px 10px;
+$navBarButtonBorder: none;
+$navBarButtonTextcolor: $primaryColor;
+
+//Using variable properties for specific class
+.navigationBar {
+    height: $navBarHeight;
+    background-color: $navBarPrimaryColor;
+    display: $navBarDisplayType;
+    justify-content: $navBarJustifyContent;
+}
+
+.navigationContainer {
+    width: $navBarContainerWidth;
+    max-width: $navBarContainerMaxWidth;
+    color: $navBarContainerTexColor;
+    display: $navBarDisplayType;
+    align-items: $navBarContainerAlignItems;
+    justify-content: $navBarContainerJustifyContent;
+}
+
+.navigationBarlogo {
+    font-weight: $navBarLogoFontWeight;
+}
+
+.navigationButton {
+    margin-left: $navBarButtonMarginLeft;
+    border: $navBarButtonBorder;
+    cursor: $navBarButtonCursor;
+    padding: $navBarButtonPadding;
+    color: $navBarButtonTextcolor;
+}
