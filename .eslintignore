@@ -1,0 +1,6 @@
+#File Extenstions
+*.css
+*.svg
+
+#Example Story Folder
+/src/stories
