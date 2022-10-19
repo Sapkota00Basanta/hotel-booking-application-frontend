@@ -1,6 +1,7 @@
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable @typescript-eslint/consistent-type-assertions */
 // Import components
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Button } from '../../stories/Button'
 import { NavBar } from './NavBar'
 
 // Defining Story Title and components
@@ -10,7 +11,7 @@ export default {
   parameters: {
     layout: 'fullscreen'
   }
-} as ComponentMeta<typeof Button>
+} as ComponentMeta<typeof NavBar>
 
 // Base function to make it interactive
 const baseTemplate: ComponentStory<typeof NavBar> = (args) => (

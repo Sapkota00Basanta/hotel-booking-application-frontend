@@ -1,0 +1,164 @@
+// Import Other Style Properties
+@import "../../App.scss";
+
+/* 
+    Defining Style Properties for Header
+*/
+// Header Class Properties
+$headerPrimaryColor: $primaryFillColor;
+$headerTextColor: $primaryTextColor;
+$headerDisplaType: flex;
+$headerJustifyContent: center;
+$headerPosition: relative;
+
+// Header Container Class Properties
+$headerConatainerMargin: 20px 0px 100px 0px;
+$headerContainerWidth: 100%;
+$headerContainerMaxWidth: 1024px;
+
+// Header List Class Properties
+$headerListDisplayType: flex;
+$headerListGap: 40px;
+$headerListMarginBottom: 50px;
+
+// Header List Item Class Properties
+$headerListItemDisplayType: flex;
+$headerListItemAlignItems: center;
+$headerListItemGap: 10px;
+
+// Header List Item with Active Class Properties
+$headerListItemWithActiveBorder: 1px solid $primaryTextColor;
+$headerListItemWithActivePadding: 10px;
+$headerListItemWithActiveBorderRadius: 20px;
+
+// Header Description Class Properties
+$headerDescriptionMargin: 20px 0px;
+
+// Header Button Class Properties
+$headerButtonBorder: none;
+$headerButtonPadding: 10px;
+$headerButtonBackgroundColor: $secondaryButtonFillColor;
+$headerButtonTextColor: $secondaryTextColor;
+$headerButtonFontWeight: 500;
+$headerButtonCursor: pointer;
+
+// Header Search Class Properties
+$headerSearchHeight: 30px;
+$headerSearchDisplayType: flex;
+$headerSearchAlignItems: center;
+$headerSearchJustifyContent: space-around;
+$headerSearchBackgroundColor: $primaryTextColor;
+$headerSearchBorder: 3px solid $secondaryButtonFillColor;
+$headerSearchBorderRadius: 5px;
+$headerSearchPadding: 10px 0px;
+$headerSearchPosition: absolute;
+$headerSearchBottom: 20px;
+$headerSearchWidth: 100%;
+$headerSearchMaxWidth: 1024px;
+
+// Header Search Icon Style Properties
+$headerSearchIconColor: $primaryIconColor;
+
+// Header Search Item Style Properties
+$headerSearchItemGap: 10px;
+$headerSearchItemDisplayType: flex;
+$headerSearchItemAlignItems: center;
+
+// Header Search Input Style Properties
+$headerSearchInputBorder: none;
+$headerSearchInputOutline: none;
+$headerSearchInputBackgroundColor: $primaryTextColor;
+
+// Header Search Text Style Properties
+$headerSearchTextColor: $primaryIconColor;
+$headerSearchTextCursor: pointer;
+
+// Header Search Date Style Properties
+$headerSearchDatePosition: absolute;
+$headerSearchDateTop: 50px;
+
+.header {
+    background-color: $headerPrimaryColor;
+    display: $headerDisplaType;
+    justify-content: $headerJustifyContent;
+    color: $headerTextColor;
+    position: $headerPosition;
+}
+
+.headerContainer {
+    width: $headerContainerWidth;
+    max-width: $headerContainerMaxWidth;
+    margin: $headerConatainerMargin;
+}
+
+.headerList {
+    display: $headerListDisplayType;
+    gap: $headerListGap;
+    margin-bottom: $headerListMarginBottom;
+}   
+
+.headerListItem {
+    display: $headerListItemDisplayType;
+    align-items: $headerListItemAlignItems;
+    gap: $headerListItemGap;
+}
+
+.headerListItem.active {
+    border: $headerListItemWithActiveBorder;
+    padding: $headerListItemWithActivePadding;
+    border-radius: $headerListItemWithActiveBorderRadius;
+}
+
+.headerDescription {
+    margin: $headerDescriptionMargin;
+}
+
+.headerButton {
+    border: $headerButtonBorder;
+    padding: $headerButtonPadding;
+    background-color: $headerButtonBackgroundColor;
+    color: $headerButtonTextColor;
+    cursor: $headerButtonCursor;
+    font-weight: $headerButtonFontWeight;
+}
+
+.headerSearch {
+    height: $headerSearchHeight;
+    display: $headerSearchDisplayType;
+    align-items: $headerSearchAlignItems;
+    justify-content: $headerSearchJustifyContent;
+    background-color: $headerSearchBackgroundColor;
+    border: $headerSearchBorder;
+    border-radius: $headerSearchBorderRadius;
+    padding: $headerSearchPadding;
+    width: $headerSearchWidth;
+    max-width: $headerSearchMaxWidth;
+    position: $headerSearchPosition;
+    bottom: $headerSearchBottom;
+}
+
+.headerSearchIcon {
+    color: $headerSearchIconColor;
+}
+
+.headerSearchItem {
+    display: $headerSearchItemDisplayType;
+    align-items: $headerSearchItemAlignItems;
+    gap: $headerSearchItemGap;
+}
+
+.headerSearchInput {
+    border: $headerSearchInputBorder;
+    outline: $headerSearchInputOutline;
+    background-color: $headerSearchInputBackgroundColor;
+}
+
+.headerSearchText {
+    color: $headerSearchTextColor;
+    cursor: $headerSearchTextCursor;
+}
+
+.headerSearchDate {
+    position: $headerSearchDatePosition;
+    top: $headerSearchDateTop;
+}

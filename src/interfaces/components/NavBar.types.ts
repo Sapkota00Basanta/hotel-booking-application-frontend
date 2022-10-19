@@ -1,8 +1,8 @@
-//Interface type for navigation component
+// Interface type for navigation component
 export interface NavBarProps {
-    user?: User;
-    onRegister?: () => void;
-    onLogin?: () => void;
+  user?: User
+  onRegister?: () => void
+  onLogin?: () => void
 }
 
-export type User = string;
+export type User = string
