@@ -5,7 +5,7 @@
     Defining properties values for Navigation Component 
 */
 //NavigationBar class properties
-$navBarPrimaryColor: $primaryColor;
+$navBarPrimaryColor: $primaryFillColor;
 $navBarHeight: 50px;
 $navBarDisplayType: flex;
 $navBarJustifyContent: center;
@@ -13,7 +13,7 @@ $navBarJustifyContent: center;
 //NavigationContainer class properties
 $navBarContainerWidth: 100%;
 $navBarContainerMaxWidth: 1024px;
-$navBarContainerTexColor: #ffffffb3;
+$navBarContainerTexColor: $primaryTextColor;
 $navBarContainerAlignItems: $navBarJustifyContent;
 $navBarContainerJustifyContent: space-between;
 
@@ -25,7 +25,9 @@ $navBarButtonMarginLeft: 20px;
 $navBarButtonCursor: pointer;
 $navBarButtonPadding: 5px 10px;
 $navBarButtonBorder: none;
-$navBarButtonTextcolor: $primaryColor;
+$navBarButtonTextcolor: $primaryTextColor;
+$navBarButtonBackgroundColor: $secondaryButtonFillColor;
+$navBarButtonFontWeight: 500;
 
 //Using variable properties for specific class
 .navigationBar {
@@ -54,4 +56,6 @@ $navBarButtonTextcolor: $primaryColor;
     cursor: $navBarButtonCursor;
     padding: $navBarButtonPadding;
     color: $navBarButtonTextcolor;
+    background-color: $navBarButtonBackgroundColor;
+    font-weight: $navBarButtonFontWeight;
 }
