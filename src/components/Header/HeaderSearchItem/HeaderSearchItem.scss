@@ -1,0 +1,59 @@
+// Import other style properties
+@import "../../../App.scss" ;
+@import "../Header.scss";
+
+/*
+    Defining Style Properties for SearchBar Component
+*/
+// Header Search Item Style Properties
+$headerSearchItemGap: 10px;
+$headerSearchItemDisplayType: flex;
+$headerSearchItemAlignItems: center;
+
+// Header Search Item Icon Style Properties
+$headerSearchItemIconColor: $primaryIconColor;
+
+// Header Search Item Input Style Properties
+$headerSearchItemInputBorder: none;
+$headerSearchItemInputOutline: none;
+$headerSearchItemInputBackgroundColor: $primaryTextColor;
+
+// Header Search Item Text Style Properties
+$headerSearchItemTextColor: $primaryIconColor;
+$headerSearchItemTextCursor: pointer;
+
+// Header Search Item Date Style Properties
+$headerSearchItemDatePosition: absolute;
+$headerSearchItemDateTop: 50px;
+
+// Header Search Item Button Style Properties
+
+.headerSearchItem {
+    display: $headerSearchItemDisplayType;
+    align-items: $headerSearchItemAlignItems;
+    gap: $headerSearchItemGap;
+}
+
+.headerSearchItemIcon {
+    color: $headerSearchItemIconColor;
+}
+
+.headerSearchItemInput {
+    border: $headerSearchItemInputBorder;
+    outline: $headerSearchItemInputOutline;
+    background-color: $headerSearchItemInputBackgroundColor;
+}
+
+.headerSearchItemText {
+    color: $headerSearchItemTextColor;
+    cursor: $headerSearchItemTextCursor;
+}
+
+.headerSearchItemDate {
+    position: $headerSearchItemDatePosition;
+    top: $headerSearchItemDateTop;
+}
+
+.headerSearchItemButton {
+    @extend .headerButton
+}

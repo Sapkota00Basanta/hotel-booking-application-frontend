@@ -1,22 +1,24 @@
 /* eslint-disable @typescript-eslint/consistent-type-assertions */
 /* eslint-disable react/react-in-jsx-scope */
 // Import Third-party Components
+import React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 // Import User-Defined Components
 import { Header } from './Header'
 
-// Defining Component Meta for Header Story
+// Defining Storybook Component Meta for Header Component
 export default {
   title: 'Components/Header',
   component: Header
 } as ComponentMeta<typeof Header>
 
-// Defining Base Template for Header Story
+// Defining Storybook base template for Header Component
 export const baseTemplate: ComponentStory<typeof Header> = (args) => (
     <Header {...args} />
 )
 
+// Actual stories for Header Component by copying base function
 export const exampleHeader = baseTemplate.bind({})
 exampleHeader.args = {
   text: 'New Hello Header'
