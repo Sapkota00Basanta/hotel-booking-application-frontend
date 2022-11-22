@@ -20,6 +20,12 @@ export type DateRangeStateProps = [DateRangeStateValue]
 // Interface Type Defination for Total Person & Room Element State
 export interface TotalPersonAndRoomProps {
     adult: number
-    children?: number
+    children: number
     room: number
+}
+
+// Interface Type Defination for Event Handler for Total Person & Room Element State
+export interface TotalPersonAndRoomEventHandlerProps {
+    totalPersonAndRoomKey: string
+    totalPersonAndRoomOperator: string
 }

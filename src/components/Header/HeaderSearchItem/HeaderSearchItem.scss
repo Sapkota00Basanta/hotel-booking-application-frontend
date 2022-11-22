@@ -1,5 +1,5 @@
 // Import other style properties
-@import "../../../App.scss" ;
+@import "../../../App.scss";
 @import "../Header.scss";
 
 /*
@@ -28,32 +28,92 @@ $headerSearchItemDateTop: 50px;
 
 // Header Search Item Button Style Properties
 
+// Header Search Item Options Style Properties
+$headerSearchItemOptionsPosition: absolute;
+$headerSearchItemOptionsTop: 50px;
+$headerSearchItemOptionsBackgroundColor: $primaryTextColor;
+$headerSearchItemOptionsTextColor: $primaryIconColor;
+$headerSearchItemOptionsBorderRadius: 5px;
+$headerSearchItemOptionsBoxShadow: 24px 30px 17px 2px $primaryIconColor;
+
+// Header Search Item Option Item Style Properties
+$headerSearchItemOptionItemWidth: 200px;
+$headerSearchItemOptionItemDisplayType: flex;
+$headerSearchItemOptionItemJustifyContent: space-between;
+$headerSearchItemOptionItemMargin: 10px;
+
+// Header Search Item Option Item Counter Style Properties
+$headerSearchItemOptionItemCounterDisplayType: flex;
+$headerSearchItemOptionItemCounterAlignItems: center;
+$headerSearchItemOptionItemCounterGap: 10px;
+$headerSearchItemOptionItemCounterFontSize: 12px;
+
+// Header Search Item Option Item Counter Button Style Properties
+$headerSearchItemOptionItemCounterButtonWidth: 25px;
+$headerSearchItemOptionItemCounterButtonHeight: 25px;
+$headerSearchItemOptionItemCounterButtonBorder: 1px solid $primaryFillColor;
+$headerSearchItemOptionItemCounterButtonTextColor: $primaryFillColor;
+$headerSearchItemOptionItemCounterButtonCursor: pointer;
+$headerSearchItemOptionItemCounterButtonBackgroundColor: $primaryTextColor;
+
 .headerSearchItem {
-    display: $headerSearchItemDisplayType;
-    align-items: $headerSearchItemAlignItems;
-    gap: $headerSearchItemGap;
+  display: $headerSearchItemDisplayType;
+  align-items: $headerSearchItemAlignItems;
+  gap: $headerSearchItemGap;
 }
 
 .headerSearchItemIcon {
-    color: $headerSearchItemIconColor;
+  color: $headerSearchItemIconColor;
 }
 
 .headerSearchItemInput {
-    border: $headerSearchItemInputBorder;
-    outline: $headerSearchItemInputOutline;
-    background-color: $headerSearchItemInputBackgroundColor;
+  border: $headerSearchItemInputBorder;
+  outline: $headerSearchItemInputOutline;
+  background-color: $headerSearchItemInputBackgroundColor;
 }
 
 .headerSearchItemText {
-    color: $headerSearchItemTextColor;
-    cursor: $headerSearchItemTextCursor;
+  color: $headerSearchItemTextColor;
+  cursor: $headerSearchItemTextCursor;
 }
 
 .headerSearchItemDate {
-    position: $headerSearchItemDatePosition;
-    top: $headerSearchItemDateTop;
+  position: $headerSearchItemDatePosition;
+  top: $headerSearchItemDateTop;
 }
 
 .headerSearchItemButton {
-    @extend .headerButton
+  @extend .headerButton;
+}
+
+.options {
+  position: $headerSearchItemOptionsPosition;
+  top: $headerSearchItemOptionsTop;
+  background-color: $headerSearchItemOptionsBackgroundColor;
+  color: $headerSearchItemOptionsTextColor;
+  border-radius: $headerSearchItemOptionsBorderRadius;
+  box-shadow: $headerSearchItemOptionsBoxShadow;
+}
+
+.optionItem {
+  width: $headerSearchItemOptionItemWidth;
+  display: $headerSearchItemOptionItemDisplayType;
+  justify-content: $headerSearchItemOptionItemJustifyContent;
+  margin: $headerSearchItemOptionItemMargin;
+}
+
+.optionItemCounter {
+  display: $headerSearchItemOptionItemCounterDisplayType;
+  align-items: $headerSearchItemOptionItemCounterAlignItems;
+  gap: $headerSearchItemOptionItemCounterGap;
+  font-size: $headerSearchItemOptionItemCounterFontSize;
+}
+
+.optionItemCounterButton {
+  width: $headerSearchItemOptionItemCounterButtonWidth;
+  height: $headerSearchItemOptionItemCounterButtonHeight;
+  border: $headerSearchItemOptionItemCounterButtonBorder;
+  color: $headerSearchItemOptionItemCounterButtonTextColor;
+  cursor: $headerSearchItemOptionItemCounterButtonCursor;
+  background-color: $headerSearchItemOptionItemCounterButtonBackgroundColor;
 }
