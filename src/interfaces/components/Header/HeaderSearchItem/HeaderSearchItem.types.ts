@@ -1,10 +1,7 @@
 /* eslint-disable @typescript-eslint/indent */
-// Import IconName Type Defination from FontAwesomeIcon
-import { IconName } from '@fortawesome/fontawesome-svg-core'
-
 // Interface for SearchBar Component Props
 export interface HeaderSearchItemProps {
-    iconType?: IconName | string
+    fieldType: string
 }
 
 // Interface Type Definations for Date Range State

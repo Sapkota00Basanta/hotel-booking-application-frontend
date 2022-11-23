@@ -2,11 +2,15 @@
 /* eslint-disable @typescript-eslint/restrict-plus-operands */
 
 // Import Third-party Components
+import { format } from 'date-fns'
 import React, { FC, MouseEventHandler, useState } from 'react'
-import { IconName } from '@fortawesome/free-solid-svg-icons'
+import {
+  faBed,
+  faCalendarDays,
+  faPerson
+} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { DateRange } from 'react-date-range'
-import { format } from 'date-fns'
 
 // Import User Defined Components & Styling from user and third party
 import './HeaderSearchItem.scss'
@@ -19,7 +23,7 @@ import {
   TotalPersonAndRoomEventHandlerProps
 } from '../../../interfaces/components/Header/HeaderSearchItem/HeaderSearchItem.types'
 
-export const HeaderSearchItem: FC<HeaderSearchItemProps> = ({ iconType }) => {
+export const HeaderSearchItem: FC<HeaderSearchItemProps> = ({ fieldType }) => {
   // Defing States for Date Range Element
   const [date, setDate] = useState<DateRangeStateProps>([
     { startDate: new Date(), endDate: new Date(), key: 'selection' }
@@ -51,38 +55,6 @@ export const HeaderSearchItem: FC<HeaderSearchItemProps> = ({ iconType }) => {
   const handleHeaderSearchItemOptionItemCounter =
   ({ totalPersonAndRoomKey, totalPersonAndRoomOperator }:
   TotalPersonAndRoomEventHandlerProps): void => {
-    // switch (totalPersonAndRoomKey) {
-    //   case 'adult':
-    //     setTotalPersonAndRoom(previousValue => {
-    //       return {
-    //         ...previousValue,
-    //         adult: totalPersonAndRoomOperator === 'increment'
-    //           ? totalPersonAndRoom.adult + 1
-    //           : totalPersonAndRoom.adult - 1
-    //       }
-    //     })
-    //     break
-    //   case 'children':
-    //     setTotalPersonAndRoom(previousValue => {
-    //       return {
-    //         ...previousValue,
-    //         children: totalPersonAndRoomOperator === 'increment'
-    //           ? totalPersonAndRoom.children + 1
-    //           : totalPersonAndRoom.children - 1
-    //       }
-    //     })
-    //     break
-    //   default:
-    //     setTotalPersonAndRoom(previousValue => {
-    //       return {
-    //         ...previousValue,
-    //         room: totalPersonAndRoomOperator === 'increment'
-    //           ? totalPersonAndRoom.room + 1
-    //           : totalPersonAndRoom.room - 1
-    //       }
-    //     })
-    //     break
-    // }
     setTotalPersonAndRoom(previousValue => {
       return {
         ...previousValue,
@@ -94,12 +66,12 @@ export const HeaderSearchItem: FC<HeaderSearchItemProps> = ({ iconType }) => {
   }
 
   // Dynamically pass JSX based on iconType Props Value
-  switch (iconType) {
-    case 'faBed':
+  switch (fieldType) {
+    case 'destinationField':
       return (
         <div className="headerSearchItem">
           <FontAwesomeIcon
-            icon={iconType as IconName}
+            icon={faBed}
             className="headerSearchItemIcon"
           />
           <input
@@ -109,11 +81,11 @@ export const HeaderSearchItem: FC<HeaderSearchItemProps> = ({ iconType }) => {
           />
         </div>
       )
-    case 'faCalendarDays':
+    case 'calendarField':
       return (
         <div className="headerSearchItem">
           <FontAwesomeIcon
-            icon={iconType as IconName}
+            icon={faCalendarDays}
             className="headerSearchItemIcon"
           />
           <span
@@ -134,11 +106,11 @@ export const HeaderSearchItem: FC<HeaderSearchItemProps> = ({ iconType }) => {
           )}
         </div>
       )
-    case 'faPerson':
+    case 'totalPersonAndRoomField':
       return (
         <div className="headerSearchItem">
           <FontAwesomeIcon
-            icon={iconType as IconName}
+            icon={faPerson}
             className="headerSearchItemIcon"
           />
           <span

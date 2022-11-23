@@ -21,19 +21,20 @@ export const baseTemplate: ComponentStory<typeof HeaderSearchItem> = (args) =>
 // Actual stories for HeaderSearchItem Component by copying base function
 export const SearchItemDestination = baseTemplate.bind({})
 SearchItemDestination.args = {
-  iconType: 'faBed'
+  fieldType: 'destinationField'
 }
 
 export const SearchItemDate = baseTemplate.bind({})
 SearchItemDate.args = {
-  iconType: 'faCalendarDays'
+  fieldType: 'calendarField'
 }
 
 export const SearchItemPerson = baseTemplate.bind({})
 SearchItemPerson.args = {
-  iconType: 'faPerson'
+  fieldType: 'totalPersonAndRoomField'
 }
 
 export const SearchItemButton = baseTemplate.bind({})
 SearchItemButton.args = {
+  fieldType: 'searchButton'
 }

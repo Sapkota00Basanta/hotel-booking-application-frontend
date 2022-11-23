@@ -21,7 +21,7 @@ export const baseTemplate: ComponentStory<typeof Header> = (args) => (
 // Actual stories for Header Component by copying base function
 export const listHeader = baseTemplate.bind({})
 listHeader.args = {
-  type: 'list'
+  displayFormat: 'list'
 }
 
 export const nonListHeader = baseTemplate.bind({})

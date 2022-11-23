@@ -10,7 +10,7 @@ export const HotelsList: FC<HotelListProps> = (_props) => {
   return (
         <div>
             <NavigationBar />
-            <Header type='hotelListMode'/>
+            <Header displayFormat='hotelListMode'/>
         </div>
   )
 }

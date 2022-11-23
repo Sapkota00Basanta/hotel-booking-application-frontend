@@ -22,30 +22,25 @@ export const baseTemplate: ComponentStory<typeof HeaderListItem> = (args) =>
 // Acutal stories for HeaderListItem Component by copying base function
 export const ListItemStays = baseTemplate.bind({})
 ListItemStays.args = {
-  iconType: 'faBed',
   spanText: 'Stays'
 }
 
 export const ListItemFlights = baseTemplate.bind({})
 ListItemFlights.args = {
-  iconType: 'faPlane',
   spanText: 'Flights'
 }
 
 export const ListItemCarRentals = baseTemplate.bind({})
 ListItemCarRentals.args = {
-  iconType: 'faCar',
   spanText: 'CarRentals'
 }
 
 export const ListItemAttractions = baseTemplate.bind({})
 ListItemAttractions.args = {
-  iconType: 'faBed',
   spanText: 'Attractions'
 }
 
 export const ListItemAirportTaxis = baseTemplate.bind({})
 ListItemAirportTaxis.args = {
-  iconType: 'faTaxi',
   spanText: 'Airport Taxis'
 }

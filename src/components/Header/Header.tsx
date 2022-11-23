@@ -15,30 +15,34 @@ import { HeaderListItem } from './HeaderListItem/HeaderListItem'
 import { HeaderSearchItem } from './HeaderSearchItem/HeaderSearchItem'
 
 // Props Values for HeaderListItem Component
-const HeaderListItemProps = {
-  fahotel: 'Stays',
-  faPlane: 'Flights',
-  faCar: 'Car Rentals',
-  faBed: 'Attractions',
-  faTaxi: 'Airport Taxis'
-}
+const HeaderListItemProps = [
+  'Stays',
+  'Flights',
+  'Car Rentals',
+  'Attractions',
+  'Airport Taxis'
+]
 
 // Props Values for HeaderSearchItem Component
-const HeaderSearchItemProps = ['faBed', 'faCalendarDays', 'faPerson', 'searchButton']
+const HeaderSearchItemProps = ['destinationField', 'calendarField',
+  'totalPersonAndRoomField', 'searchButton']
 
-export const Header: FC<HeaderProps> = ({ type }) => {
+export const Header: FC<HeaderProps> = ({ displayFormat }) => {
   return (
     <div className="header">
-      <div className={type === 'hotelListMode' ? 'headerContainer listMode' : 'headerContainer'}>
+      <div className={displayFormat === 'hotelListMode'
+        ? 'headerContainer listMode'
+        : 'headerContainer'}>
         <div className="headerList">
           {
-            // Iterating through HeaderListItemProps Object to pass values to HeaderListItem
-            Object.entries(HeaderListItemProps).map(([iconType, spanText], index) => (
-              <HeaderListItem key={index} iconType={iconType} spanText={spanText} />
-            ))
+            HeaderListItemProps.map((spanText, index) => {
+              return (
+                <HeaderListItem key={index} spanText={spanText} />
+              )
+            })
           }
         </div>
-        {type !== 'hotelListMode' && <><h1 className="headerTitle">
+        {displayFormat !== 'hotelListMode' && <><h1 className="headerTitle">
           A Lifetime of discounts ? It&apos;s Genius.
         </h1>
         <p className="headerDescription">
@@ -46,8 +50,8 @@ export const Header: FC<HeaderProps> = ({ type }) => {
         </p>
         <button className="headerButton">SignIn/Register</button>
         <div className="headerSearch">
-          { HeaderSearchItemProps.map((iconType, index) => (
-            <HeaderSearchItem key={index} iconType={iconType} />
+          { HeaderSearchItemProps.map((fieldValue, index) => (
+            <HeaderSearchItem key={index} fieldType={fieldValue} />
           ))}
         </div>
         </>
