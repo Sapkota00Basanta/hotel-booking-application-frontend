@@ -26,6 +26,6 @@ export interface TotalPersonAndRoomProps {
 
 // Interface Type Defination for Event Handler for Total Person & Room Element State
 export interface TotalPersonAndRoomEventHandlerProps {
-    totalPersonAndRoomKey: string
+    totalPersonAndRoomKey: keyof TotalPersonAndRoomProps // Passing keyof totalPersonAndRoomprops
     totalPersonAndRoomOperator: string
 }

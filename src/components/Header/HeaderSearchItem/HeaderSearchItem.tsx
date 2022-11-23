@@ -51,38 +51,46 @@ export const HeaderSearchItem: FC<HeaderSearchItemProps> = ({ iconType }) => {
   const handleHeaderSearchItemOptionItemCounter =
   ({ totalPersonAndRoomKey, totalPersonAndRoomOperator }:
   TotalPersonAndRoomEventHandlerProps): void => {
-    switch (totalPersonAndRoomKey) {
-      case 'adult':
-        setTotalPersonAndRoom(previousValue => {
-          return {
-            ...previousValue,
-            adult: totalPersonAndRoomOperator === 'increment'
-              ? totalPersonAndRoom.adult + 1
-              : totalPersonAndRoom.adult - 1
-          }
-        })
-        break
-      case 'children':
-        setTotalPersonAndRoom(previousValue => {
-          return {
-            ...previousValue,
-            children: totalPersonAndRoomOperator === 'increment'
-              ? totalPersonAndRoom.children + 1
-              : totalPersonAndRoom.children - 1
-          }
-        })
-        break
-      default:
-        setTotalPersonAndRoom(previousValue => {
-          return {
-            ...previousValue,
-            room: totalPersonAndRoomOperator === 'increment'
-              ? totalPersonAndRoom.room + 1
-              : totalPersonAndRoom.room - 1
-          }
-        })
-        break
-    }
+    // switch (totalPersonAndRoomKey) {
+    //   case 'adult':
+    //     setTotalPersonAndRoom(previousValue => {
+    //       return {
+    //         ...previousValue,
+    //         adult: totalPersonAndRoomOperator === 'increment'
+    //           ? totalPersonAndRoom.adult + 1
+    //           : totalPersonAndRoom.adult - 1
+    //       }
+    //     })
+    //     break
+    //   case 'children':
+    //     setTotalPersonAndRoom(previousValue => {
+    //       return {
+    //         ...previousValue,
+    //         children: totalPersonAndRoomOperator === 'increment'
+    //           ? totalPersonAndRoom.children + 1
+    //           : totalPersonAndRoom.children - 1
+    //       }
+    //     })
+    //     break
+    //   default:
+    //     setTotalPersonAndRoom(previousValue => {
+    //       return {
+    //         ...previousValue,
+    //         room: totalPersonAndRoomOperator === 'increment'
+    //           ? totalPersonAndRoom.room + 1
+    //           : totalPersonAndRoom.room - 1
+    //       }
+    //     })
+    //     break
+    // }
+    setTotalPersonAndRoom(previousValue => {
+      return {
+        ...previousValue,
+        [totalPersonAndRoomKey]: totalPersonAndRoomOperator === 'increment'
+          ? totalPersonAndRoom[totalPersonAndRoomKey] + 1
+          : totalPersonAndRoom[totalPersonAndRoomKey] - 1
+      }
+    })
   }
 
   // Dynamically pass JSX based on iconType Props Value
@@ -133,20 +141,24 @@ export const HeaderSearchItem: FC<HeaderSearchItemProps> = ({ iconType }) => {
             icon={iconType as IconName}
             className="headerSearchItemIcon"
           />
-          <span className="headerSearchItemText">
+          <span
+          onClick={toggleTotalPersonAndRoomComponent}
+          className="headerSearchItemText">
             `{totalPersonAndRoom.adult} adult - {totalPersonAndRoom.children}{' '}
             children - {totalPersonAndRoom.room} room`
           </span>
+          { showTotalPersonAndRoom &&
           <div className="options">
             <div className="optionItem">
               <span className="optionItemText">Adult</span>
               <div className="optionItemCounter">
                 <button className="optionItemCounterButton"
+                disabled={totalPersonAndRoom.adult <= 1}
                 onClick={() =>
                   handleHeaderSearchItemOptionItemCounter(
                     { totalPersonAndRoomKey: 'adult', totalPersonAndRoomOperator: 'decrement' })
                   }>-</button>
-                <span className="optionItemCounterNumber">1</span>
+                <span className="optionItemCounterNumber">{`${totalPersonAndRoom.adult}`}</span>
                 <button className="optionItemCounterButton"
                 onClick={() =>
                   handleHeaderSearchItemOptionItemCounter(
@@ -157,12 +169,14 @@ export const HeaderSearchItem: FC<HeaderSearchItemProps> = ({ iconType }) => {
             <div className="optionItem">
               <span className="optionItemText">Children</span>
               <div className="optionItemCounter">
-                <button className="optionItemCounterButton" onClick={() => {
+                <button className="optionItemCounterButton"
+                disabled={totalPersonAndRoom.children <= 0}
+                onClick={() => {
                   handleHeaderSearchItemOptionItemCounter(
                     { totalPersonAndRoomKey: 'children', totalPersonAndRoomOperator: 'decrement' }
                   )
                 }}>-</button>
-                <span className="optionItemCounterNumber">0</span>
+                <span className="optionItemCounterNumber">{`${totalPersonAndRoom.children}`}</span>
                 <button className="optionItemCounterButton" onClick={() => {
                   handleHeaderSearchItemOptionItemCounter(
                     { totalPersonAndRoomKey: 'children', totalPersonAndRoomOperator: 'increment' }
@@ -173,12 +187,14 @@ export const HeaderSearchItem: FC<HeaderSearchItemProps> = ({ iconType }) => {
             <div className="optionItem">
               <span className="optionItemText">Room</span>
               <div className="optionItemCounter">
-                <button className="optionItemCounterButton" onClick={() => {
+                <button className="optionItemCounterButton"
+                disabled={totalPersonAndRoom.room <= 1}
+                onClick={() => {
                   handleHeaderSearchItemOptionItemCounter(
                     { totalPersonAndRoomKey: 'room', totalPersonAndRoomOperator: 'decrement' }
                   )
                 }}>-</button>
-                <span className="optionItemCounterNumber">1</span>
+                <span className="optionItemCounterNumber">{`${totalPersonAndRoom.room}`}</span>
                 <button className="optionItemCounterButton" onClick={() => {
                   handleHeaderSearchItemOptionItemCounter(
                     { totalPersonAndRoomKey: 'room', totalPersonAndRoomOperator: 'increment' }
@@ -187,6 +203,7 @@ export const HeaderSearchItem: FC<HeaderSearchItemProps> = ({ iconType }) => {
               </div>
             </div>
           </div>
+          }
         </div>
       )
     case 'searchButton':

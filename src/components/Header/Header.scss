@@ -4,7 +4,7 @@ Import method is being deprecated in future.
 CSS also uses import which has its own drawbacks,
 So, use 'use' keyword instead of import
 */
-@import "../../App"; 
+@import "../../App";
 
 /* 
     Defining Style Properties for Header
@@ -20,6 +20,9 @@ $headerPosition: relative;
 $headerConatainerMargin: 20px 0px 100px 0px;
 $headerContainerWidth: 100%;
 $headerContainerMaxWidth: 1024px;
+
+// Header Container including listMode Class Style Properties
+$headerContainerWithListModeMargin: 20px 0px 0px 0px;
 
 // Header List Class Properties
 $headerListDisplayType: flex;
@@ -52,49 +55,53 @@ $headerSearchWidth: 100%;
 $headerSearchMaxWidth: 1024px;
 
 .header {
-    background-color: $headerPrimaryColor;
-    display: $headerDisplaType;
-    justify-content: $headerJustifyContent;
-    color: $headerTextColor;
-    position: $headerPosition;
+  background-color: $headerPrimaryColor;
+  display: $headerDisplaType;
+  justify-content: $headerJustifyContent;
+  color: $headerTextColor;
+  position: $headerPosition;
 }
 
 .headerContainer {
-    width: $headerContainerWidth;
-    max-width: $headerContainerMaxWidth;
-    margin: $headerConatainerMargin;
+  width: $headerContainerWidth;
+  max-width: $headerContainerMaxWidth;
+  margin: $headerConatainerMargin;
+}
+
+.headerContainer.listMode {
+  margin: $headerContainerWithListModeMargin;
 }
 
 .headerList {
-    display: $headerListDisplayType;
-    gap: $headerListGap;
-    margin-bottom: $headerListMarginBottom;
-}   
+  display: $headerListDisplayType;
+  gap: $headerListGap;
+  margin-bottom: $headerListMarginBottom;
+}
 
 .headerDescription {
-    margin: $headerDescriptionMargin;
+  margin: $headerDescriptionMargin;
 }
 
 .headerButton {
-    border: $headerButtonBorder;
-    padding: $headerButtonPadding;
-    background-color: $headerButtonBackgroundColor;
-    color: $headerButtonTextColor;
-    cursor: $headerButtonCursor;
-    font-weight: $headerButtonFontWeight;
+  border: $headerButtonBorder;
+  padding: $headerButtonPadding;
+  background-color: $headerButtonBackgroundColor;
+  color: $headerButtonTextColor;
+  cursor: $headerButtonCursor;
+  font-weight: $headerButtonFontWeight;
 }
 
 .headerSearch {
-    height: $headerSearchHeight;
-    display: $headerSearchDisplayType;
-    align-items: $headerSearchAlignItems;
-    justify-content: $headerSearchJustifyContent;
-    background-color: $headerSearchBackgroundColor;
-    border: $headerSearchBorder;
-    border-radius: $headerSearchBorderRadius;
-    padding: $headerSearchPadding;
-    width: $headerSearchWidth;
-    max-width: $headerSearchMaxWidth;
-    position: $headerSearchPosition;
-    bottom: $headerSearchBottom;
+  height: $headerSearchHeight;
+  display: $headerSearchDisplayType;
+  align-items: $headerSearchAlignItems;
+  justify-content: $headerSearchJustifyContent;
+  background-color: $headerSearchBackgroundColor;
+  border: $headerSearchBorder;
+  border-radius: $headerSearchBorderRadius;
+  padding: $headerSearchPadding;
+  width: $headerSearchWidth;
+  max-width: $headerSearchMaxWidth;
+  position: $headerSearchPosition;
+  bottom: $headerSearchBottom;
 }

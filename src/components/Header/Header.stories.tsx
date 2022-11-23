@@ -19,7 +19,11 @@ export const baseTemplate: ComponentStory<typeof Header> = (args) => (
 )
 
 // Actual stories for Header Component by copying base function
-export const exampleHeader = baseTemplate.bind({})
-exampleHeader.args = {
-  text: 'New Hello Header'
+export const listHeader = baseTemplate.bind({})
+listHeader.args = {
+  type: 'list'
+}
+
+export const nonListHeader = baseTemplate.bind({})
+nonListHeader.args = {
 }

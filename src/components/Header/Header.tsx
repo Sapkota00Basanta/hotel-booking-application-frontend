@@ -26,10 +26,10 @@ const HeaderListItemProps = {
 // Props Values for HeaderSearchItem Component
 const HeaderSearchItemProps = ['faBed', 'faCalendarDays', 'faPerson', 'searchButton']
 
-export const Header: FC<HeaderProps> = (props) => {
+export const Header: FC<HeaderProps> = ({ type }) => {
   return (
     <div className="header">
-      <div className="headerContainer">
+      <div className={type === 'hotelListMode' ? 'headerContainer listMode' : 'headerContainer'}>
         <div className="headerList">
           {
             // Iterating through HeaderListItemProps Object to pass values to HeaderListItem
@@ -38,7 +38,7 @@ export const Header: FC<HeaderProps> = (props) => {
             ))
           }
         </div>
-        <h1 className="headerTitle">
+        {type !== 'hotelListMode' && <><h1 className="headerTitle">
           A Lifetime of discounts ? It&apos;s Genius.
         </h1>
         <p className="headerDescription">
@@ -50,6 +50,8 @@ export const Header: FC<HeaderProps> = (props) => {
             <HeaderSearchItem key={index} iconType={iconType} />
           ))}
         </div>
+        </>
+        }
       </div>
     </div>
   )

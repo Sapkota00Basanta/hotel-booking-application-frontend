@@ -13,7 +13,7 @@ export const Home: FC<HomeProps> = (_props) => {
   return (
         <div >
             <NavigationBar />
-            <Header text="Hello from Header" />
+            <Header />
         </div>
   )
 }

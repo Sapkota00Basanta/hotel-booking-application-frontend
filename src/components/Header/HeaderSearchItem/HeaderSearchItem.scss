@@ -55,6 +55,7 @@ $headerSearchItemOptionItemCounterButtonBorder: 1px solid $primaryFillColor;
 $headerSearchItemOptionItemCounterButtonTextColor: $primaryFillColor;
 $headerSearchItemOptionItemCounterButtonCursor: pointer;
 $headerSearchItemOptionItemCounterButtonBackgroundColor: $primaryTextColor;
+$headerSearchItemOptionItemCounterButtonDisabledCursor: not-allowed;
 
 .headerSearchItem {
   display: $headerSearchItemDisplayType;
@@ -116,4 +117,8 @@ $headerSearchItemOptionItemCounterButtonBackgroundColor: $primaryTextColor;
   color: $headerSearchItemOptionItemCounterButtonTextColor;
   cursor: $headerSearchItemOptionItemCounterButtonCursor;
   background-color: $headerSearchItemOptionItemCounterButtonBackgroundColor;
+}
+
+.optionItemCounterButton:disabled {
+  cursor: $headerSearchItemOptionItemCounterButtonDisabledCursor;
 }
