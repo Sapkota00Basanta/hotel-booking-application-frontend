@@ -5,15 +5,15 @@ import React, { FC } from 'react'
 import './Home.scss'
 
 // Importing components for pages
-import { NavBar } from '../../components/NavBar/NavBar'
+import { NavigationBar } from '../../components/NavigationBar/NavigationBar'
 import { Header } from '../../components/Header/Header'
 import { HomeProps } from '../../interfaces/pages/HomePage.types'
 
 export const Home: FC<HomeProps> = (_props) => {
   return (
         <div >
-            <NavBar />
-            <Header text="Hello from Header" />
+            <NavigationBar />
+            <Header />
         </div>
   )
 }

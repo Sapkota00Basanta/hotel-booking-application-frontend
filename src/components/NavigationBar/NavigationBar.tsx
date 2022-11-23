@@ -2,10 +2,10 @@
 import React, { FC } from 'react'
 
 // Import User-Defined Modules
-import './NavBar.scss'
-import { NavBarProps } from '../../interfaces/components/NavBar.types'
+import './NavigationBar.scss'
+import { NavigationBarProps } from '../../interfaces/components/NavigationBar/NavigationBar.types'
 
-export const NavBar: FC<NavBarProps> = ({ onLogin, onRegister }) => {
+export const NavigationBar: FC<NavigationBarProps> = ({ onLogin, onRegister }) => {
   return (
         <div className="navigationBar">
             <div className="navigationContainer">

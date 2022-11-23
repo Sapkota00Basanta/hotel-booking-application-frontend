@@ -17,7 +17,7 @@ export const App: FC<AppProps> = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home props={''} />} />
-        <Route path="/hotel" element={<HotelsList props={''}/>} />
+        <Route path="/hotels" element={<HotelsList props={''}/>} />
         <Route path="/hotel/:id" element={<Hotel props={''}/>} />
       </Routes>
     </BrowserRouter>

@@ -1,0 +1,27 @@
+// Import styles from other components
+@import '../../../App.scss';
+
+/* 
+    Defining Style properties for HeaderListItem Component
+*/
+// Header List Item Class Properties
+$headerListItemDisplayType: flex;
+$headerListItemAlignItems: center;
+$headerListItemGap: 10px;
+
+// Header List Item with Active Class Properties
+$headerListItemWithActiveBorder: 1px solid $primaryTextColor;
+$headerListItemWithActivePadding: 10px;
+$headerListItemWithActiveBorderRadius: 20px;
+
+.headerListItem {
+    display: $headerListItemDisplayType;
+    align-items: $headerListItemAlignItems;
+    gap: $headerListItemGap;
+}
+
+.headerListItem.active {
+    border: $headerListItemWithActiveBorder;
+    padding: $headerListItemWithActivePadding;
+    border-radius: $headerListItemWithActiveBorderRadius;
+}
