@@ -1,0 +1,58 @@
+// Import other style properties
+@import "../../App.scss";
+
+/*
+    Defining style properties for Featured Item Component
+*/
+
+// FeaturedItemContainer Style Properties
+$featuredItemContainerWidth: 100%;
+$featuredItemContainerMaxWidth: 1024px;
+$featuredItemContainerDisplayType: flex;
+$featuredItemContainerJustifyContent: space-between;
+$featuredItemContainerGap: 20px;
+$featuredItemContainerZindex: 1;
+
+// FeaturedItem Style Properties
+$featuredItemPosition: relative;
+$featuredItemColor: $primaryTextColor;
+$featuredItemBorderRadius: 10px;
+$featuredItemOverflow: hidden;
+$featuredItemHeight: 250px;
+
+// FeaturedItemImage Style Properties
+$featuredItemImageWidth: 100%;
+$featuredItemImageObjectFit: cover;
+
+// FeaturedItemTitle Style Properties
+$featuredItemTitlePosition: absolute;
+$featuredItemTitleBottom: 20px;
+$featuredItemTitleLeft: 20px;
+
+.featuredItemContainer {
+  width: $featuredItemContainerWidth;
+  max-width: $featuredItemContainerMaxWidth;
+  display: $featuredItemContainerDisplayType;
+  justify-content: $featuredItemContainerDisplayType;
+  gap: $featuredItemContainerGap;
+  z-index: $featuredItemContainerZindex;
+}
+
+.featuredItem {
+  position: $featuredItemPosition;
+  color: $featuredItemColor;
+  border-radius: $featuredItemBorderRadius;
+  overflow: $featuredItemOverflow;
+  height: $featuredItemHeight;
+}
+
+.featuredItemImage {
+  width: $featuredItemImageWidth;
+  object-fit: $featuredItemImageObjectFit;
+}
+
+.featuredItemTitle {
+  position: $featuredItemTitlePosition;
+  bottom: $featuredItemTitleBottom;
+  left: $featuredItemTitleLeft;
+}

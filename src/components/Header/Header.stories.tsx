@@ -15,7 +15,7 @@ export default {
 
 // Defining Storybook base template for Header Component
 export const baseTemplate: ComponentStory<typeof Header> = (args) => (
-    <Header {...args} />
+  <Header {...args} />
 )
 
 // Actual stories for Header Component by copying base function

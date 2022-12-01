@@ -1,14 +1,29 @@
 //Import other components
 @import "../../App.scss";
 
-//Style Properties for Home Component
-// $primaryColor: #000000;
+/* 
+    Defining Style Properties for Home Component
+*/
+// Home Container Style Properties
+$homeContainerMarginTop: 50px;
+$homeContainerDisplayType: flex;
+$homeContainerFlexDirection: column;
+$homeContainerAlignItems: center;
+$homeContainerGap: 30px;
 
-// body div {
-//     margin: 0px;
-//     color: $primaryColor;
-// }
+// Home Property Title Style Properties
+$homePropertyTitleWidth: 1024px;
+$homePropertyTitleFontSize: 20px;
 
-// .mainBody {
-//     color: $secondaryColor;
-// }
+.homeContainer {
+  margin-top: $homeContainerMarginTop;
+  display: $homeContainerDisplayType;
+  flex-direction: $homeContainerFlexDirection;
+  align-items: $homeContainerAlignItems;
+  gap: $homeContainerGap;
+}
+
+.homePropertyTitle {
+  width: $homePropertyTitleWidth;
+  font-size: $homePropertyTitleFontSize;
+}

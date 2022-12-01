@@ -1,0 +1,94 @@
+// Import other Style properties
+@import "../../App";
+
+/* 
+    Defining Style Properties for MostLovedItem Component
+*/
+
+// MostLovedItems Style Properties
+$mostLovedItemsWidth: 100%;
+$mostLovedItemsMaxWidth: 1024px;
+$mostLovedItemsDisplayType: flex;
+$mostLovedItemsJustifyContent: space-between;
+$mostLovedItemsGap: 20px;
+
+// MostLovedItem Style Properties
+$mostLovedItemGap: 10px;
+$mostLovedItemFlex: 1;
+$mostLovedItemDisplayType: flex;
+$mostLovedItemFlexDirection: column;
+$mostLovedItemBorderRadius: 10px;
+$mostLovedItemOverflow: hidden;
+
+// MostLovedItemImage Style Properties
+$mostLovedItemImageWidth: 100%;
+$mostLovedItemImageHeight: 200px;
+$mostLovedItemImageObjectFit: cover;
+$mostLovedItemImageCursor: pointer;
+
+// MostLovedItemName Style Properties
+$mostLovedItemNameFontWeight: bold;
+
+// MostLovedItemCity Style Properties
+$mostLovedItemCityFontWeight: 300;
+
+// MostLovedItemPrice Style Properties
+$mostLovedItemPriceFontWeight: 500;
+
+// MostLovedItemRating Style Properties
+$mostLovedItemRatingButtonBorder: none;
+$mostLovedItemRatingButtonPadding: 3px;
+$mostLovedItemRatingButtonFontWeight: bold;
+$mostLovedItemRatingButtonMarginRight: 10px;
+$mostLovedItemRatingButtonBackgroundColor: $primaryFillColor;
+$mostLovedItemRatingButtonColor: $secondaryTextColor;
+$mostLovedItemRatingSpanFontSize: 14px;
+
+.mostLovedItems {
+  width: $mostLovedItemsWidth;
+  max-width: $mostLovedItemsMaxWidth;
+  display: $mostLovedItemsDisplayType;
+  justify-content: $mostLovedItemsJustifyContent;
+  gap: $mostLovedItemsGap;
+}
+
+.mostLovedItem {
+  gap: $mostLovedItemGap;
+  flex: $mostLovedItemFlex;
+  display: $mostLovedItemDisplayType;
+  flex-direction: $mostLovedItemFlexDirection;
+  border-radius: $mostLovedItemBorderRadius;
+  overflow: $mostLovedItemOverflow;
+}
+
+.mostLovedItemImage {
+  width: $mostLovedItemImageWidth;
+  height: $mostLovedItemImageHeight;
+  object-fit: $mostLovedItemImageObjectFit;
+  cursor: $mostLovedItemImageCursor;
+}
+
+.mostLovedItemName {
+  font-weight: $mostLovedItemNameFontWeight;
+}
+
+.mostLovedItemCity {
+  font-weight: $mostLovedItemCityFontWeight;
+}
+
+.mostLovedItemPrice {
+  font-weight: $mostLovedItemPriceFontWeight;
+}
+
+.mostLovedItemRating > button {
+  background-color: $mostLovedItemRatingButtonBackgroundColor;
+  color: $mostLovedItemRatingButtonColor;
+  border: $mostLovedItemRatingButtonBorder;
+  padding: $mostLovedItemRatingButtonPadding;
+  margin-right: $mostLovedItemRatingButtonMarginRight;
+  font-weight: $mostLovedItemRatingButtonFontWeight;
+}
+
+.mostLovedItemRating > span {
+  font-size: $mostLovedItemRatingSpanFontSize;
+}

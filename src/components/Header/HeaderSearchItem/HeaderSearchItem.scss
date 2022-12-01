@@ -25,6 +25,7 @@ $headerSearchItemTextCursor: pointer;
 // Header Search Item Date Style Properties
 $headerSearchItemDatePosition: absolute;
 $headerSearchItemDateTop: 50px;
+$headerSearchItemDateZindex: 2;
 
 // Header Search Item Button Style Properties
 
@@ -35,6 +36,7 @@ $headerSearchItemOptionsBackgroundColor: $primaryTextColor;
 $headerSearchItemOptionsTextColor: $primaryIconColor;
 $headerSearchItemOptionsBorderRadius: 5px;
 $headerSearchItemOptionsBoxShadow: 24px 30px 17px 2px $primaryIconColor;
+$headerSearchItemOptionsZindex: 2;
 
 // Header Search Item Option Item Style Properties
 $headerSearchItemOptionItemWidth: 200px;
@@ -81,6 +83,7 @@ $headerSearchItemOptionItemCounterButtonDisabledCursor: not-allowed;
 .headerSearchItemDate {
   position: $headerSearchItemDatePosition;
   top: $headerSearchItemDateTop;
+  z-index: $headerSearchItemDateZindex;
 }
 
 .headerSearchItemButton {
@@ -94,6 +97,7 @@ $headerSearchItemOptionItemCounterButtonDisabledCursor: not-allowed;
   color: $headerSearchItemOptionsTextColor;
   border-radius: $headerSearchItemOptionsBorderRadius;
   box-shadow: $headerSearchItemOptionsBoxShadow;
+  z-index: $headerSearchItemDateZindex;
 }
 
 .optionItem {
