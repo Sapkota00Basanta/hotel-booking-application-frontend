@@ -11,7 +11,7 @@ $featuredItemContainerMaxWidth: 1024px;
 $featuredItemContainerDisplayType: flex;
 $featuredItemContainerJustifyContent: space-between;
 $featuredItemContainerGap: 20px;
-$featuredItemZinde: 1;
+$featuredItemContainerZindex: 1;
 
 // FeaturedItem Style Properties
 $featuredItemPosition: relative;
@@ -35,7 +35,7 @@ $featuredItemTitleLeft: 20px;
   display: $featuredItemContainerDisplayType;
   justify-content: $featuredItemContainerDisplayType;
   gap: $featuredItemContainerGap;
-  z-index: 1;
+  z-index: $featuredItemContainerZindex;
 }
 
 .featuredItem {

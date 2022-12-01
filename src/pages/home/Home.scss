@@ -11,10 +11,19 @@ $homeContainerFlexDirection: column;
 $homeContainerAlignItems: center;
 $homeContainerGap: 30px;
 
+// Home Property Title Style Properties
+$homePropertyTitleWidth: 1024px;
+$homePropertyTitleFontSize: 20px;
+
 .homeContainer {
   margin-top: $homeContainerMarginTop;
   display: $homeContainerDisplayType;
   flex-direction: $homeContainerFlexDirection;
   align-items: $homeContainerAlignItems;
   gap: $homeContainerGap;
+}
+
+.homePropertyTitle {
+  width: $homePropertyTitleWidth;
+  font-size: $homePropertyTitleFontSize;
 }

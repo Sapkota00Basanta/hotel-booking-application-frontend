@@ -1,0 +1,59 @@
+// Import other style properties
+@import "../../App";
+
+/*
+    Defining Style Properties for Property List Component
+*/
+
+//PropertyListItems Style Properties
+$propertyListItemsDisplayType: flex;
+$propertyListItemsJustifyContent: space-between;
+$propertyListItemsWidth: 100%;
+$propertyListItemsMaxWidth: 1024px;
+$propertListItemsGap: 20px;
+
+// PropertyListItem Style Properties
+$propertyListItemBorderRadius: 20px;
+$propertyListItemOverflow: hidden;
+$propertyListItemCursor: pointer;
+$propertyListItemFlexValue: 1;
+
+// PropertyListItemImage Style Properties
+$propertyListItemImageWidth: 100%;
+$propertyListItemImageHeight: 150px;
+$propertyListItemImageObjectFit: cover;
+
+// PropertyListItemImageTitle Style Properties
+$propertyListItemImageTitleH1FontSize: 18px;
+$propertyListItemImageTitleH2FontSize: 14px;
+$propertyListItemImageTitleH2FontWeight: 300;
+
+.propertyListItems {
+  display: $propertyListItemsDisplayType;
+  justify-content: $propertyListItemsJustifyContent;
+  width: $propertyListItemsWidth;
+  max-width: $propertyListItemsMaxWidth;
+  gap: $propertListItemsGap;
+}
+
+.propertyListItem {
+  border-radius: $propertyListItemBorderRadius;
+  overflow: $propertyListItemOverflow;
+  cursor: $propertyListItemCursor;
+  flex: $propertyListItemFlexValue;
+}
+
+.propertyListItemImage {
+  width: $propertyListItemImageWidth;
+  height: $propertyListItemImageHeight;
+  object-fit: $propertyListItemImageObjectFit;
+}
+
+.propertyListItemImageTitle > h1 {
+  font-size: $propertyListItemImageTitleH1FontSize;
+}
+
+.propertyListItemImageTitle > h2 {
+  font-size: $propertyListItemImageTitleH2FontSize;
+  font-weight: $propertyListItemImageTitleH2FontWeight;
+}
