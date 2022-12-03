@@ -1,0 +1,70 @@
+// Import other style properties
+@import "../../App";
+
+/*
+  Defining Style properties for SubscriptionComponent
+*/
+
+// Subscription Style Properties
+$subscriptionWidth: 100%;
+$subscriptionMarginTop: 30px;
+$subscriptionBackgroundColor: $primaryFillColor;
+$subscriptionTextColor: $primaryTextColor;
+$subscriptionDisplayType: flex;
+$subscriptionFlexDirection: column;
+$subscriptionAlignItems: center;
+$subscriptionGap: 20px;
+$subscriptionPadding: 50px;
+
+// SubscriptionTitle Style Properties
+$subscriptionTitleMargin: 0px;
+
+// SubscriptionInputFormContainer Style Properties
+$subscriptionInputFormContainerInputWidth: 300px;
+$subscriptionInputFormContainerInputHeight: 30px;
+$subscriptionInputFormContainerInputBorder: none;
+$subscriptionInputFormContainerInputMarginRight: 10px;
+$subscriptionInputFormContainerInputPadding: 5px;
+$subscriptionInputFormContainerInputBorderRadius: 5px;
+$subscriptionInputFormConatinerButtonBackgroundColor: $secondaryButtonFillColor;
+$subscriptionInputFormContainerButtonHeight: 40px;
+$subscriptionInputFormContainerButtonTextColor: $primaryTextColor;
+$subscriptionInputFormContainerButtonBorder: none;
+$subscriptionInputFormContainerButtonBorderRadius: 5px;
+$subscriptionInputFormContainerButtonFontWeight: 500;
+$subscriptionInputFormContainerButtonCursor: pointer;
+
+.subscription {
+  width: $subscriptionWidth;
+  margin-top: $subscriptionMarginTop;
+  background-color: $subscriptionBackgroundColor;
+  color: $subscriptionTextColor;
+  display: $subscriptionDisplayType;
+  flex-direction: $subscriptionFlexDirection;
+  align-items: $subscriptionAlignItems;
+  gap: $subscriptionGap;
+  padding: $subscriptionPadding;
+}
+
+.subscriptionTitle {
+  margin: $subscriptionTitleMargin;
+}
+
+.subscriptionInputFormContainer > input {
+  width: $subscriptionInputFormContainerInputWidth;
+  height: $subscriptionInputFormContainerInputHeight;
+  border: $subscriptionInputFormContainerInputBorder;
+  border-radius: $subscriptionInputFormContainerInputBorderRadius;
+  margin-right: $subscriptionInputFormContainerInputMarginRight;
+  padding: $subscriptionInputFormContainerInputPadding;
+}
+
+.subscriptionInputFormContainer > button {
+  background-color: $subscriptionInputFormConatinerButtonBackgroundColor;
+  height: $subscriptionInputFormContainerButtonHeight;
+  color: $subscriptionInputFormContainerButtonTextColor;
+  border: $subscriptionInputFormContainerButtonBorder;
+  border-radius: $subscriptionInputFormContainerButtonBorderRadius;
+  font-weight: $subscriptionInputFormContainerButtonFontWeight;
+  cursor: $subscriptionInputFormContainerButtonCursor;
+}
