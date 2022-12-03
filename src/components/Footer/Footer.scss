@@ -1,0 +1,31 @@
+// Import Other Style Properties
+@import "../../App";
+
+/*
+    Defining Style Properties for Footer Component
+*/
+
+// FooterContainer Style Properties
+$footerContainerWidth: 100%;
+$footerContainerMaxWidth: 1024px;
+$footerContainerFontSize: 12px;
+
+// FooterListContainer Style Properties
+$footerListContainerWidth: 100%;
+$footerListContainerDisplayType: flex;
+$footerListContainerJustifyContent: space-between;
+
+.footerContainer {
+  width: $footerContainerWidth;
+  max-width: $footerContainerMaxWidth;
+  font-size: $footerContainerFontSize;
+}
+
+.footerListContainer {
+  width: $footerListContainerWidth;
+  display: $footerListContainerDisplayType;
+  justify-content: $footerListContainerJustifyContent;
+}
+
+.footerListItems {
+}
