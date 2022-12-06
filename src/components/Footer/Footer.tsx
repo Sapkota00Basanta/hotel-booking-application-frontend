@@ -42,6 +42,7 @@ export const Footer: FC<FooterProps> = (_props) => {
                     {/* <li className='footerListItem'>Hotels</li> */}
                 </ul>
             </div>
+            <div className="footerListText">Copyright @ 2022</div>
         </div>
   )
 }

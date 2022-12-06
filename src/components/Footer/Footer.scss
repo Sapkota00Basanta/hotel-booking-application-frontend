@@ -14,6 +14,16 @@ $footerContainerFontSize: 12px;
 $footerListContainerWidth: 100%;
 $footerListContainerDisplayType: flex;
 $footerListContainerJustifyContent: space-between;
+$footerListContainerMarginBottom: 50px;
+
+// FooterListItems style properties
+$footerListItemsListStyle: none;
+$footerListItemsPadding: 0;
+
+// FooterListItem Style Properties
+$footerListItemMarginBottom: 10px;
+$footerListItemFontColor: $primaryFillColor;
+$footerListItemCursor: pointer;
 
 .footerContainer {
   width: $footerContainerWidth;
@@ -25,7 +35,16 @@ $footerListContainerJustifyContent: space-between;
   width: $footerListContainerWidth;
   display: $footerListContainerDisplayType;
   justify-content: $footerListContainerJustifyContent;
+  margin-bottom: $footerListContainerMarginBottom;
 }
 
 .footerListItems {
+  list-style: $footerListItemsListStyle;
+  padding: $footerListItemsPadding;
+}
+
+.footerListItem {
+  margin-bottom: $footerListItemMarginBottom;
+  color: $footerListItemFontColor;
+  cursor: $footerListItemCursor;
 }
