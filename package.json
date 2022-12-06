@@ -1,6 +1,6 @@
 {
   "name": "hotel-booking-application-frontend",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
