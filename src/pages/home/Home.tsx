@@ -6,8 +6,9 @@ import './Home.scss'
 
 // Importing components for pages
 import { Header } from '../../components/Header/Header'
-import { Subscription } from '../../components/Subscription/Subscription'
+import { Footer } from '../../components/Footer/Footer'
 import { HomeProps } from '../../interfaces/pages/HomePage.types'
+import { Subscription } from '../../components/Subscription/Subscription'
 import { PropertyList } from '../../components/PropertyList/PropertyList'
 import { FeaturedItem } from '../../components/FeaturedItem/FeaturedItem'
 import { MostLovedItem } from '../../components/MostLovedItem/MostLovedItem'
@@ -25,6 +26,7 @@ export const Home: FC<HomeProps> = (_props) => {
         <h1 className="homePropertyTitle">Most loved homes</h1>
         <MostLovedItem />
         <Subscription />
+        <Footer />
       </div>
     </div>
   )
